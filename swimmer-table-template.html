@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <th>First</th><th>Last</th><th>Event 1</th><th>E1 Place</th>
+    <th>Event 2</th><th>E2 Place</th><th>Event 3</th><th>E3 Place</th><th>Total Points</th>
+  </tr>
+  <tr id={{person.id}} ng-repeat="person in swimmerCtrl.swimmers" ng-click="swimmerCtrl.setActive(person)">
+    <td ng-repeat="(field, val) in person">{{val}}</td>
+    <td>{{swimmerCtrl.totalPoints(person.e1p,person.e2p,person.e3p)}}
+  </tr>
+</table>
+<form ng-show="swimmerCtrl.lname">
+  <h2>Swimmer/Diver: {{swimmerCtrl.lname}}</h2>
+  <select ng-model="swimmerCtrl.e1" ng-change="swimmerCtrl.update()">
+    <option ng-repeat="(v, o) in swimmerCtrl.selectOptions" value="{{v}}">{{o}}</option>
+  </select> place in {{swimmerCtrl.activePerson.e1}}
+  <br>
+  <select ng-model="swimmerCtrl.e2" ng-change="swimmerCtrl.update()">
+    <option ng-repeat="(v, o) in swimmerCtrl.selectOptions" value="{{v}}">{{o}}</option>
+  </select> place in {{swimmerCtrl.activePerson.e2}}
+  <br>
+  <select ng-model="swimmerCtrl.e3" ng-change="swimmerCtrl.update()">
+    <option ng-repeat="(v, o) in swimmerCtrl.selectOptions" value="{{v}}">{{o}}</option>
+  </select> place in {{swimmerCtrl.activePerson.e3}}
+  <br>
+</form>

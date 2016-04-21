@@ -1,0 +1,7 @@
+<table>
+  <tr><th>Relay</th><th>Place</th><th>Points</th></tr>
+  <tr ng-repeat="row in relayCtrl.relays">
+    <td>{{row.name}}</td><td>{{row.place}}</td><td>{{relayCtrl.points(row.place)}}</td>
+  </tr>
+</table>
+<!-- {{relayCtrl.totalRelayPoints}} -->

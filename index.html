@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>ACC Scoring</title>
+    <link rel="stylesheet" type="text/css" href="acc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="swimmer-table.js"></script>
+    <script src="relay-table.js"></script>
+  </head>
+  <body>
+    <h1>2016 ACC UNC Scoring</h1>
+    <div ng-app="accScoring" ng-controller="points">
+      <h2>Click a row to edit the places for that person</h2>
+      <swimmer-table></swimmer-table>
+      <relay-table></relay-table>
+      <h1>{{teamPoints}} points</h1>
+    </div>
+  </body>
+</html>
