@@ -4,5 +4,7 @@ This is a simple web application that I wrote to allow my teammates to predict t
 The front end of this project is using angular 1 to create custom components that represent the individual table and the relay table.
 ## API
 The API for this project is written in PHP and uses the pg_connect library to query the database to retrieve the swimmers and relays, as well as update the swimmers places when there is a change on the front end.
+
+The API uses the extra path info for GET requests to determine whether to retrieve individual swimmers and their events/places or the relays and their places. For example, AJAX requests to "2016accScoring.php/swimmers" will return the swimmers and their events/places.
 ## Back-end
 The back end of this application is a PostgreSQL database that was hosted on my student server space at UNC (no longer active since graduation).
